@@ -19,6 +19,8 @@ func New(options ...Option) (*Router, error) {
 		o(r)
 	}
 
+	r.engine.GET("/", r.handleRoot)
+
 	return r, nil
 }
 
